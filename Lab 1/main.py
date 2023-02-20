@@ -95,23 +95,23 @@ def time_fib_binet(n):
 # ========================================================================================================
 
 if __name__ == "__main__":
-    vals = [5, 7, 10, 12, 15, 17, 20, 22, 25, 27, 30, 32]
+    vals = [501, 631, 794, 1000, 1259, 1585, 1995, 2512, 3162, 3981, 5012, 6310, 7943, 10000, 12589, 15849, 19952, 25119, 31623, 39810, 50119, 63100,]
     n = len(vals)
 
-    plt.plot([time_fib_recursive(vals[i]) for i in range(0, n)])
+    #plt.plot([time_fib_recursive(vals[i]) for i in range(0, n)])
     plt.plot([time_fib_iterative(vals[i]) for i in range(0, n)])
     plt.plot([time_fib_memoized(vals[i]) for i in range(0, n)])
     plt.plot([time_fib_matrix(vals[i]) for i in range(0, n)])
     plt.plot([time_fib_binet(vals[i]) for i in range(0, n)])
 
     table = PrettyTable()
-    table.field_names = ["n", "fib_recursive", "fib_iterative", "fib_memoized", "fib_matrix", "fib_binet"]
+    table.field_names = ["n", "fib_iterative", "fib_memoized", "fib_matrix", "fib_binet"]
     for i in range(0, n):
-        table.add_row([vals[i], time_fib_recursive(vals[i]), time_fib_iterative(vals[i]), time_fib_memoized(vals[i]),
+        table.add_row([vals[i], time_fib_iterative(vals[i]), time_fib_memoized(vals[i]),
                        time_fib_matrix(vals[i]), time_fib_binet(vals[i])])
     print(table)
 
-    plt.legend(['fib_recursive', 'fib_iterative', 'fib_memoized', 'fib_matrix', 'fib_binet'])
+    plt.legend(['fib_iterative', 'fib_memoized', 'fib_matrix', 'fib_binet'])
     plt.title('Fibonacci')
     plt.xlabel(vals[0:n])
     plt.ylabel('time in milliseconds')
