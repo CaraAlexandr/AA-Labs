@@ -59,7 +59,7 @@ The Partition function takes the pivot element from the end of the array and par
 
 The QuickSort function recursively applies the partitioning process to each sub-array until the entire array is sorted.
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 # <div align="center">Merge sort
 MergeSort is a sorting algorithm that follows the divide-and-conquer paradigm. The algorithm works by repeatedly dividing the input array into two halves, sorting them recursively, and then merging the sorted halves to produce a final sorted array.
@@ -106,7 +106,7 @@ In this pseudocode, arr is the unsorted array. The MergeSort function recursivel
 
 The Merge function takes two sorted arrays, left and right, and merges them into a single sorted array result. It repeatedly compares the first elements of left and right, and appends the smaller element to result. When one of the sub-arrays is empty, the function appends the remaining elements of the other sub-array to result. Finally, the function returns the merged and sorted array result.
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 # <div align="center">Heap sort
 HeapSort is a comparison-based sorting algorithm that uses a binary heap data structure to sort elements in an array. A binary heap is a complete binary tree where every parent node is either greater than or less than its children, depending on whether the heap is a max-heap or a min-heap.
@@ -155,7 +155,7 @@ sift_down(arr, i, n):
 ```
 In this pseudocode, arr is the input array to be sorted. The HeapSort function builds a max heap from the input array, then repeatedly extracts the maximum element from the heap and restores the heap property until the heap is empty. The sift_down function is used to sift down an element to its correct position in the heap, starting from index i.
 
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
 
 # <div align="center">Bogo sort
 
@@ -188,7 +188,7 @@ is_sorted(arr):
 ```
 In this pseudocode, arr is the array to be sorted. The BogoSort function repeatedly shuffles the array randomly until it is sorted, using the is_sorted function to check if the array is sorted or not. The is_sorted function checks if the array is sorted by iterating through the elements and comparing adjacent pairs. If any adjacent pairs are out of order, the function returns False, otherwise, it returns True.
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 # <div align="center">Conclusion
 
@@ -201,6 +201,6 @@ In this pseudocode, arr is the array to be sorted. The BogoSort function repeate
 4. Bogo Sort: Bogo sort is a highly inefficient sorting algorithm that works by shuffling an array randomly until it is sorted. It has an average-case time complexity of O(n * n!), which makes it impractical for any practical use case.
 
 
-![img_6.png](img_6.png)
-![img_7.png](img_7.png)
+![img_6.png](img/img_6.png)
+![img_7.png](img/img_7.png)
 Overall, quick sort, merge sort, and heap sort are all efficient sorting algorithms that are commonly used in practice. Quick sort is often the preferred algorithm due to its average-case time complexity and cache-friendliness. Merge sort is a good choice when additional memory is available for the merge step. Heap sort is a good choice when additional memory is not available and the worst-case time complexity is important. Bogo sort is not a practical algorithm and is only used for educational or joke purposes.
