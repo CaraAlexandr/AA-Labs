@@ -156,17 +156,17 @@ def print_array(arr):
 
 if __name__ == '__main__':
     # Set up variables for testing
-    n_values = [5, 10, 20, 30]
+    n_values = [5, 10, 20, 30, 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 20000, 30000, 50000, 100000 ]
     lower = 0
-    upper = 100
+    upper = 100000
 
     # Generate random arrays for testing
     arrays = [generate_random_array(n, lower, upper) for n in n_values]
 
-    unsorted_arr_for_q = arrays
-    unsorted_arr_for_m = arrays
-    unsorted_arr_for_h = arrays
-    unsorted_arr_for_b = arrays
+    unsorted_arr_for_q = arrays.copy()
+    unsorted_arr_for_m = arrays.copy()
+    unsorted_arr_for_h = arrays.copy()
+    unsorted_arr_for_b = arrays.copy()
 
     # Test each algorithm on each array and record execution time
     quick_sort_times = []
@@ -216,9 +216,9 @@ if __name__ == '__main__':
 
     arrays = [generate_random_array(n, lower, upper) for n in n_values]
 
-    unsorted_arr_for_q = arrays
-    unsorted_arr_for_m = arrays
-    unsorted_arr_for_h = arrays
+    unsorted_arr_for_q = arrays.copy()
+    unsorted_arr_for_m = arrays.copy()
+    unsorted_arr_for_h = arrays.copy()
 
     quick_sort_times = []
     merge_sort_times = []
