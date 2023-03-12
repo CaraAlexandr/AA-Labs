@@ -91,8 +91,11 @@ def heap_sort(arr):
 
 
 def bogo_sort(arr):
+    n=0
     while not is_sorted(arr):
         random.shuffle(arr)
+        n = n+1
+        print(n)
     return arr
 
 
@@ -156,23 +159,26 @@ def print_array(arr):
 
 if __name__ == '__main__':
     # Set up variables for testing
-    n_values = [5, 10, 20, 30, 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 20000, 30000, 50000, 100000 ]
+    n_values = [5,6,7,8,9,10]
     lower = 0
     upper = 100000
 
     # Generate random arrays for testing
-    arrays = [generate_random_array(n, lower, upper) for n in n_values]
+    array = [generate_random_array(n, lower, upper) for n in n_values]
 
-    unsorted_arr_for_q = arrays.copy()
-    unsorted_arr_for_m = arrays.copy()
-    unsorted_arr_for_h = arrays.copy()
-    unsorted_arr_for_b = arrays.copy()
+    unsorted_arr_for_q = array.copy()
+    unsorted_arr_for_m = array.copy()
+    unsorted_arr_for_h = array.copy()
+    unsorted_arr_for_b = array.copy()
 
     # Test each algorithm on each array and record execution time
     quick_sort_times = []
     merge_sort_times = []
     heap_sort_times = []
     bogo_sort_times = []
+
+    for arr in unsorted_arr_for_b:
+        bogo_sort_times.append(time_execution(bogo_sort, arr))
 
     for arr in unsorted_arr_for_q:
         quick_sort_times.append(time_execution(quick_sort, arr))
@@ -183,8 +189,6 @@ if __name__ == '__main__':
     for arr in unsorted_arr_for_h:
         heap_sort_times.append(time_execution(heap_sort, arr))
 
-    for arr in unsorted_arr_for_b:
-        bogo_sort_times.append(time_execution(bogo_sort, arr))
 
     print("Quick sort")
     for arr in unsorted_arr_for_q:
@@ -200,6 +204,7 @@ if __name__ == '__main__':
 
     print("Bogo sort")
     for arr in unsorted_arr_for_b:
+
         print_array(bogo_sort(arr))
 
     # Plot the results
@@ -214,11 +219,11 @@ if __name__ == '__main__':
     lower = 0
     upper = 1000000
 
-    arrays = [generate_random_array(n, lower, upper) for n in n_values]
+    array = [generate_random_array(n, lower, upper) for n in n_values]
 
-    unsorted_arr_for_q = arrays.copy()
-    unsorted_arr_for_m = arrays.copy()
-    unsorted_arr_for_h = arrays.copy()
+    unsorted_arr_for_q = array.copy()
+    unsorted_arr_for_m = array.copy()
+    unsorted_arr_for_h = array.copy()
 
     quick_sort_times = []
     merge_sort_times = []
@@ -234,3 +239,6 @@ if __name__ == '__main__':
         heap_sort_times.append(time_execution(heap_sort, arr))
 
     plot_qs_ms_hs(n_values, quick_sort_times, merge_sort_times, heap_sort_times)
+
+
+

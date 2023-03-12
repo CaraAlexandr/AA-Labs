@@ -10,7 +10,7 @@ st. gr. FAF-21X<div align="right"> Cara Alexandr </div>
 <div align="left"> Verified: </div>
 asist. univ. <div align="right"> Fiștic Cristofor </div>
 
-# BASIC TASK:
+# BASIC TASK:1
 
 1. Implement the algorithms listed above in a programming language
 2. Establish the properties of the input data against which the analysis is
@@ -204,3 +204,8 @@ In this pseudocode, arr is the array to be sorted. The BogoSort function repeate
 ![img_6.png](img/img_6.png)
 ![img_7.png](img/img_7.png)
 Overall, quick sort, merge sort, and heap sort are all efficient sorting algorithms that are commonly used in practice. Quick sort is often the preferred algorithm due to its average-case time complexity and cache-friendliness. Merge sort is a good choice when additional memory is available for the merge step. Heap sort is a good choice when additional memory is not available and the worst-case time complexity is important. Bogo sort is not a practical algorithm and is only used for educational or joke purposes.
+
+
+
+
+
